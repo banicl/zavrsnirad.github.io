@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+
+	<name>COM_GALLERY_WD</name>
+	<creationDate>April 2014</creationDate>
+	<author>Web-Dorado</author>
+	<authorUrl>http://www.web-dorado.com</authorUrl>
+    <copyright>Copyright (C) 2014 Web-Dorado.com. All rights reserved.</copyright> 
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.3.10</version>
+	<description>COM_GALLERY_WD_DESCRIPTION</description>
+ <scriptfile>script.gallery_wd_lite.php</scriptfile>
+	<install> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.sql</file>
+		</sql>
+	</install>
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+
+
+		<languages>
+                <language tag="en-GB">en-GB.com_gallery_wd.ini</language>
+    </languages>
+	<media  destination="com_gallery_wd">
+				<folder>uploads</folder>
+    </media>		
+			
+	<files>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>language</folder>
+		<folder>controllers</folder>
+		<folder>css</folder>
+	    <folder>fonts</folder>
+		<folder>framework</folder>
+		<folder>js</folder>
+		<folder>images</folder>
+		<filename>controller.php</filename>
+		<filename>gallery_wd.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	
+	<administration>
+		<menu>COM_GALLERY_WD</menu>
+		<submenu>
+            <menu view="galleries">COM_GALLERY_WD_GALLERYES</menu>
+			<menu view="albums">COM_GALLERY_WD_ALBUMS</menu>
+            <menu view="tags">COM_GALLERY_WD_TAGS</menu>
+		    <menu view="options">COM_GALLERY_WD_OPTIONS</menu>
+		    <menu view="themes">COM_GALLERY_WD_THEMES</menu>
+		    <menu view="shortcode">COM_GALLERY_WD_SHORTCODE</menu>	
+		    <menu view="licensing">COM_GALLERY_WD_LICENSING</menu>				
+         </submenu>		
+
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>gallery_wd.php</filename>
+			<filename>controller.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>language</folder>
+
+			<folder>controllers</folder>
+
+			<folder>helpers</folder>
+			<folder>images</folder>
+
+			<folder>uploads</folder>
+		</files>
+	</administration>
+
+</extension>
